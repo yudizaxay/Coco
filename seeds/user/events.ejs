@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <%- include('header'); -%>
+    <title>Coco</title>
+   
+  </head>
+  <body>
+    <section class="explore-nft common-padding-top">
+        <div class="container">
+            <div class="mt-0">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-12">
+                        <h1 style="text-align: center;" class="no-before"> Registered<span class="line-heading position-relative"> Events</span>
+                        </h1>
+                    </div>
+                    <div class="col-12" id="eventMsg" style="display:none;">
+                        <h3 style="text-align: center; color: rgb(229, 101, 101);" class="no-before"> There are no event's yet<span class="line-heading position-relative"></span>
+                        </h3>
+                    </div>
+                    <div class="col-12">
+                        <div class="common-area">
+                            <ul id="nftCollections" class="row align-items-center nft-listing">
+                                <!-- list of all sold nfts -->
+                               
+                            </ul>
+                            <!-- <div class="text-center">
+                                <span style="display: none;" class="text-white">No Data Available</span><br/>
+                                <button style="display: none;" type="button" skip="0" id="load-more-nfts" onclick="getNFTs($(this))" class="btn btn-secondary mar-btm-30">Load More</button>
+                              
+                            </div> -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../user/JS/events.js"></script>
+  </body>
+  </html>
