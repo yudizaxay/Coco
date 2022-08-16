@@ -44,6 +44,9 @@ const upload = multer(oMulterObj).single("file");
 //register events
 controllers.registerEvent = async (req, res) => {
     try {
+        if (!fs.existsSync(process.cwd() + "/cover-pic")) {
+            fs.mkdirSync(process.cwd() + "/cover-pic");
+        } 
         await upload(req, res, async (error) => {
             if (error) return res.reply(messages.bad_request(error.message));
             if (!req.body.sWalletAddress)
