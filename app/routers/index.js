@@ -1,7 +1,6 @@
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
-//const helmet = require('helmet');
 const cors = require('cors');
 const compression = require('compression');
 const morgan = require('morgan');
@@ -30,7 +29,6 @@ Router.prototype.setupMiddleware = function () {
     this.app.disable('etag');
     this.app.enable('trust proxy');
     this.app.use(cors(this.corsOptions));
-    //this.app.use(helmet());
     this.app.use(compression());
     this.app.use(bodyParser.json({ limit: '16mb' }));
     this.app.use(bodyParser.urlencoded({ limit: '16mb', extended: true, parameterLimit: 50000 }));
