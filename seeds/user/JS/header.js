@@ -1,10 +1,10 @@
 $(document).ready(async function () {
-    if (!window.localStorage.getItem("wallet")) {
-        $("#dconnect").hide();
-    } else {
+    if (window.localStorage.getItem("wallet")) {
         $("#dconnect").show();
         let wallet = window.localStorage.getItem("wallet").substring(0, 10) + "..."
         $("#connect").html(wallet);
+    } else {
+        $("#dconnect").hide();
     }
 });
 
